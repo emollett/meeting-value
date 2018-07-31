@@ -4,16 +4,27 @@
     <title>Meeting cost counter</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 <body>
-  <form class="form-inline">
-    <div class="form-group">
-      <label for="attendees" class="inputtybit">How many people are at the meeting?</label>
-    </div>
-    <div>
-    <input type="text" class="form-control" id="attendees" onblur="incrementCount(0)">
+
+  <div class="form-group col-xs-3">
+    <label for="attendees">How many people are at the meeting?</label>
+    <input type="text" class="form-control input-lg" id="attendees">
   </div>
-  </form>
+
+  <div class="col-xs-12">
+    <button type="button" class="btn btn-success btn-lg" onclick="incrementCount(0)">Start</button>
+    <button type="button" class="btn btn-danger btn-lg">Stop</button>
+  </div>
+
 </body>
   <body>
     <div class="main_container" id="id_main_container">
