@@ -14,7 +14,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 <body>
-
+  <div class="col-xs-12">
+    <h1>Meeting cost calculator</h1>
+  </div>
   <div class="form-group col-xs-3">
     <label for="attendees">How many people are at the meeting?</label>
     <input type="text" class="form-control input-lg" id="attendees">
@@ -22,8 +24,8 @@
 
   <div class="col-xs-12">
     <button type="button" class="btn btn-success btn-lg" onclick="incrementCount(0)">Start</button>
+    <button type="button" class="btn btn-warning btn-lg" onclick="pause()">Pause</button>
     <button type="button" class="btn btn-lg" onclick="window.location.reload()">Reset</button>
-    <button type="button" class="btn btn-lg" onclick="pause()">Pause</button>
   </div>
 
 </body>
@@ -48,7 +50,7 @@
           display_div.removeChild(display_div.lastChild);
       }
       str_counter_0++;
-      display_str = "£" + ((people*(200/(7.5*60*60)).toFixed(5)) *str_counter_0).toString();
+      display_str = "£" + ((people*(200/(7.5*60*60))) *str_counter_0).toFixed(2).toString();
       for (var i = 0; i < display_str.length; i++) {
         var new_span = document.createElement('span');
         new_span.className = 'num_tiles';
