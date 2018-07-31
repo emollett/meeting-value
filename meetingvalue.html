@@ -22,7 +22,8 @@
 
   <div class="col-xs-12">
     <button type="button" class="btn btn-success btn-lg" onclick="incrementCount(0)">Start</button>
-    <button type="button" class="btn btn-danger btn-lg">Stop</button>
+    <button type="button" class="btn btn-lg" onclick="window.location.reload()">Reset</button>
+    <button type="button" class="btn btn-lg" onclick="pause()">Pause</button>
   </div>
 
 </body>
@@ -32,18 +33,19 @@
       </div>
     </div>
     <script>
-    var counter_list = [00,00000,00000];
-    var str_counter_0 = counter_list[0];
-    var str_counter_1 = counter_list[1];
-    var str_counter_2 = counter_list[2];
+    var str_counter_0 = 0;
     var display_str = "";
     var display_div = document.getElementById("display_div_id");
 
     function incrementCount(current_count){
       var people = document.getElementById("attendees").value;
-      console.log(people);
-      setInterval(function(){
-        // clear count
+
+      var interval = setInterval(timer,1000);
+      function pause(){
+        clearInterval(interval);
+      };
+
+      function timer(){
         while (display_div.hasChildNodes()) {
             display_div.removeChild(display_div.lastChild);
         }
@@ -56,7 +58,10 @@
           new_span.innerText = display_str[i];
           display_div.appendChild(new_span);
         }
-      },1000);
+      };
+
+
+
     }
     </script>
   </body>
