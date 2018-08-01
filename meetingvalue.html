@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8"/>
     <title>Meeting cost counter</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -56,7 +57,7 @@
           display_div.removeChild(display_div.lastChild);
       }
       str_counter_0++;
-      display_str = "£" + ((people*(rate/(7.5*60*60))) *str_counter_0).toFixed(2).toString();
+      display_str ="£"+((people*(rate/(7.5*60*60))) *str_counter_0).toFixed(2).toString();
       for (var i = 0; i < display_str.length; i++) {
         var new_span = document.createElement('span');
         new_span.className = 'num_tiles';
