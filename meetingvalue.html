@@ -22,9 +22,16 @@
     <label for="attendees">How many people are at the meeting?</label>
     <input type="text" class="form-control input-lg" id="attendees">
   </div>
-  <div class="form-group col-sm-3 col-xs-6">
+  <div class="form-group col-sm-3 col-xs-6" id="dayRateInput" style="visibility:visible">
     <label for="dayRate">What is the average day rate for attendees?</label>
     <input type="text" class="form-control input-lg" id="dayRate">
+  </div>
+
+  <div class="col-xs-12">
+    <div class="col-xs-6 col-sm-3"></div>
+    <div class="checkbox col-sm-3 col-xs-6" id="checkboxHidden" style="visibility:visible">
+      <label><input type="checkbox" id="dayRateHidden" name="dayRateHidden" value="hidden" onclick="hide()">Hide the day rate</label>
+    </div>
   </div>
 
   <div class="col-xs-12">

@@ -26,3 +26,17 @@ function timer(){
 function pause(){
   clearInterval(interval);
 }
+
+function hide(){
+  var checkBox = document.getElementById("dayRateHidden");
+
+  var dayRateInput = document.getElementById("dayRateInput");
+
+  if (checkBox.checked == true){
+    dayRateInput.style.visibility = "hidden";
+    checkboxHidden.style.visibility = "hidden"
+    }else{
+    dayRateInput.style.visibility = "visible";
+    checkboxHidden.style.visibility = "visible";
+    }
+  }
