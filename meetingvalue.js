@@ -27,16 +27,14 @@ function pause(){
   clearInterval(interval);
 }
 
-function hide(){
+function toggleDayRateVisibility(){
   var checkBox = document.getElementById("dayRateHidden");
 
   var dayRateInput = document.getElementById("dayRateInput");
 
   if (checkBox.checked == true){
-    dayRateInput.style.visibility = "hidden";
-    checkboxHidden.style.visibility = "hidden"
+    dayRate.style.visibility = "hidden";
     }else{
-    dayRateInput.style.visibility = "visible";
-    checkboxHidden.style.visibility = "visible";
+    dayRate.style.visibility = "visible";
     }
   }
