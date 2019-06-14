@@ -4,50 +4,45 @@
     <meta charset="utf-8"/>
     <title>Meeting cost counter</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
+
 <body>
-  <div class="col-xs-12">
-    <h1>Meeting cost calculator</h1>
-  </div>
-  <div class="form-group col-sm-3 col-xs-6">
-    <label for="attendees">How many people are at the meeting?</label>
-    <input type="text" class="form-control input-lg" id="attendees">
-  </div>
-  <div class="form-group col-sm-3 col-xs-6" id="dayRateInput">
-    <label for="dayRate">What is the average day rate for attendees?</label>
-    <input type="text" class="form-control input-lg" id="dayRate" style="visibility:visible">
-  </div>
+  <h1>Meeting cost calculator</h1>
 
-  <div class="col-xs-12">
-    <div class="col-xs-6 col-sm-3"></div>
-    <div class="checkbox col-sm-3 col-xs-6" id="checkboxHidden" style="visibility:visible">
-<label><input type="checkbox" id="dayRateHidden" name="dayRateHidden" value="hidden" onclick="toggleDayRateVisibility()">Hide/show
-  the day rate</label>
+    <div class="input_container">
+
+      <div class="form-group" style="grid-column:2">
+        <label class="form_label" for="attendees">How many people are there?</label>
+        <input type="text" class="form_input" id="attendees">
+      </div>
+
+      <div class="form-group" id="dayRateInput" style="grid-column:4">
+        <label class="form_label" for="dayRate">What is their average day rate?</label>
+        <input type="text" class="form_input" id="dayRate" style="visibility:visible">
+      </div>
+
+      <div class="checkbox" id="checkboxHidden" style="visibility:visible">
+        <label><input type="checkbox" id="dayRateHidden" name="dayRateHidden" value="hidden" onclick="toggleDayRateVisibility()">Hide/show the day rate</label>
+      </div>
+
+
+      <button type="button" class="btn btn-success btn-lg" onclick="incrementCount(0)" style="grid-column:2">Start</button>
+      <button type="button" class="btn btn-warning btn-lg" onclick="pause()" style="grid-column:4">Pause</button>
+      <button type="button" class="btn btn-lg" onclick="window.location.reload()" style="grid-column:6">Reset</button>
+
+
     </div>
-  </div>
 
-  <div class="col-xs-12">
-    <button type="button" class="btn btn-success btn-lg" onclick="incrementCount(0)">Start</button>
-    <button type="button" class="btn btn-warning btn-lg" onclick="pause()">Pause</button>
-    <button type="button" class="btn btn-lg" onclick="window.location.reload()">Reset</button>
-  </div>
 
-</body>
-  <body>
     <div class="main_container" id="id_main_container">
       <div class="container_inner" id="display_div_id">
       </div>
     </div>
 
+
     <script src="meetingvalue.js"></script>
-  </body>
+
+</body>
 </html>

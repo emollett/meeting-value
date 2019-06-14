@@ -1,4 +1,59 @@
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 400%;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+h2, h3, h4, label, button{
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  width: 10%;
+  border-style: solid;
+  border-color: gray;
+}
+
+.input_container{
+  display: grid;
+  grid-template-columns: 50px 20% 30px 20% 30px 20% auto;
+  grid-template-rows: auto auto 20px auto 30px auto
+}
+
+.form_label{
+  display: grid;
+  grid-row:1;
+  font-size: 18px;
+}
+
+.form_input{
+  width: 75%;
+  display: grid;
+  grid-row:2;
+  padding: 6px;
+  margin-top: 6px;
+}
+
+.checkbox{
+  display: grid;
+  grid-column: 2;
+  grid-row:4;
+}
+
+.btn{
+  display: grid;
+  grid-row:6;
+}
+
+.btn-lg{
+  width: 75%;
+  height:50px;
+  font-size: 20px;
+}
+
 .main_container {
+  margin-left: 44px;
   height: 100px;
   width: auto;
   padding: 3px;
