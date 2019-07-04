@@ -1,2 +1,3 @@
+# deploy/before_install
 #!/bin/bash
-sudo rm -rf /var/www/html/index.html
+sudo rm -f /var/www/html/index.html
