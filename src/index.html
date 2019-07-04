@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Meeting cost counter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+
+<body>
+  <h1>Meeting cost calculator</h1>
+
+    <div class="input_container">
+
+      <div class="form-group" style="grid-column:2">
+        <label class="form_label" for="attendees">How many people are there?</label>
+        <input type="text" class="form_input" id="attendees">
+      </div>
+
+      <div class="form-group" id="dayRateInput" style="grid-column:4">
+        <label class="form_label" for="dayRate">What is their average day rate?</label>
+        <input type="text" class="form_input" id="dayRate" style="visibility:visible">
+      </div>
+
+      <div class="checkbox" id="checkboxHidden" style="visibility:visible">
+        <label><input type="checkbox" id="dayRateHidden" name="dayRateHidden" value="hidden" onclick="toggleDayRateVisibility()">Hide/show the day rate</label>
+      </div>
+
+
+      <button type="button" class="btn btn-success btn-lg" onclick="incrementCount(0)" style="grid-column:2">Start</button>
+      <button type="button" class="btn btn-warning btn-lg" onclick="pause()" style="grid-column:4">Pause</button>
+      <button type="button" class="btn btn-lg" onclick="window.location.reload()" style="grid-column:6">Reset</button>
+
+
+    </div>
+
+
+    <div class="main_container" id="id_main_container">
+      <div class="container_inner" id="display_div_id">
+      </div>
+    </div>
+
+
+    <script src="meetingvalue.js"></script>
+
+</body>
+</html>
