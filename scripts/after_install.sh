@@ -1,3 +1,3 @@
-# deploy/after_install/
+# scripts/after_install/
 #!/bin/bash
 sudo service apache2 restart
