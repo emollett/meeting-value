@@ -6,4 +6,4 @@ The timer can be paused and reset, and if you need to hide the day rate, check t
 
 Altering any of the values will cause the calculator to restart.
 
-[https://emollett.github.io/meeting-value/index](https://emollett.github.io/meeting-value/index)
+[https://emollett.github.io/meeting-value/src/index](https://emollett.github.io/meeting-value/src/index)
